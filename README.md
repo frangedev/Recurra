@@ -101,18 +101,33 @@ Configure your `config.json`:
 
 - `reverb`
 - `delay`
+- `distortion`
 - `lowpass`
 - `highpass`
-- `pitchshift`
-- `bitcrush`
+- `bitcrusher`
 - *(add your own via `fx/`)*
 
 Use like:
 
 ```bash
-> fx add reverb
-> fx chain delay pitchshift
-> fx clear
+# Add an effect
+> effect add reverb
+
+# Set effect parameters
+> effect set reverb decay 0.8
+> effect set reverb mix 0.5
+
+# Remove an effect
+> effect remove reverb
+
+# List available effects
+> effect list
+
+# List active effects
+> effect active
+
+# Clear all effects
+> effect clear
 ```
 
 ---
